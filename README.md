@@ -23,8 +23,8 @@ a databricks, pudiendo trabajar desde la UI de Databricks en mi repo.
 ## Permisos en DataBricks
 ### Para manejar el acceso de Databricks al DataLake he seguido los siguientes pasos:
 
-1.Crear un service principal
-2.Añadir al grupo de acceso a DataLake con rol de Storage Blob Data Contributor
-3.Crear secreto en key vault
-4.Añadir a un secret-scope de databricks el secreto.
-5.Conectar desde el nootebook usando el método de conexión de service-principal 
+1. Crear un service principal
+2. Añadir al grupo de acceso a DataLake con rol de Storage Blob Data Contributor
+3. Crear secreto en key vault
+4. Añadir a un secret-scope de databricks el secreto.
+5. Conectar desde el nootebook usando el método de conexión de service-principal 
