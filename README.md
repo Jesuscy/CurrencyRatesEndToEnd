@@ -21,17 +21,10 @@ He decidido trabajar con Databricks, desde mi repositorio, para esto desde añad
 a databricks, pudiendo trabajar desde la UI de Databricks en mi repo.
 ![alt text](image.png)
 ## Permisos en DataBricks
-Para asignar permisos a Databricks en mi DataLake he seguido los siguientes pasos:
+### Para manejar el acceso de Databricks al DataLake he seguido los siguientes pasos:
 
-1. Accede al portal de Azure.
-2. Navega al recurso Azure Databricks que vas a usar.
-3. En el menú izquierdo, selecciona Identidad administrada (Managed Identity).
-4. Habilita la opción Identidad asignada por el sistema y guarda los cambios.
-5. Navega ahora al Storage Account (ADLS Gen2) que contiene tu Data Lake.
-6. En el menú lateral, selecciona Control de acceso (IAM).
-7. Haz clic en Agregar > Agregar asignación de rol.
-8. Selecciona el rol Storage Blob Data Reader (si solo necesitas lectura) o Storage Blob Data Contributor (si necesitas escribir).
-9. En Asignar acceso a, elige Entidad de servicio administrada.
-10. Busca y selecciona el recurso Azure Databricks con Managed Identity habilitada.
-
-
+1.Crear un service principal
+2.Añadir al grupo de acceso a DataLake con rol de Storage Blob Data Contributor
+3.Crear secreto en key vault
+4.Añadir a un secret-scope de databricks el secreto.
+5.Conectar desde el nootebook usando el método de conexión de service-principal 
