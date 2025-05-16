@@ -1,5 +1,6 @@
 import os
 import requests
+import json
 from datetime import datetime
 from requests.exceptions import HTTPError
 from dotenv import load_dotenv
@@ -11,7 +12,7 @@ load_dotenv()
 
 def get_currency_rates(currency):
     api_key = os.getenv('API_KEY')
-    url = f'https://v6.exchangerate-api.com/v6/{api_key}/latest/USD'
+    url = f'https://v6.exchangerate-api.com/v6/{api_key}/latest/{currency}'
     try:
         response = requests.get(url)
         data = response.json()
@@ -27,7 +28,7 @@ def azure_login():
     service_client = DataLakeServiceClient(account_url=account, credential=credential)
     return service_client
 
-def upload_toADLG2(data):
+def upload_toADLG2(currencyFileData):
     todayDate = datetime.now().strftime("%Y%m%d%H%M%S")
     service_client = azure_login()
 
@@ -35,20 +36,17 @@ def upload_toADLG2(data):
     container_client = service_client.get_file_system_client("currency")
     if not container_client.exists:
         service_client.create_file_system('currency')
-        
-    #Compruebo que exista el directorio en el container.
-    container_paths = container_client.get_paths()
-    rawExists = False
-
-    for path in container_paths:
-        if path == 'raw' and path.is_directory:
-            rawExists = True
-            container_client.get_directory_client(path)
-            container_client.create_file(todayDate)
     
-    if rawExists == False:
-        container_client.create_directory('raw')
+    #Compruebo que exista el directorio en el container.
+    if not container_client.get_paths('raw'):
+        raw_container = container_client.create_directory('raw')
         container_client.create_directory('curated')
         container_client.create_directory('common')
 
+    #Creo el archivo en raw.   
+    currencyFile = raw_container.create_file(todayDate)
+    json_str = json.dumps(currencyFileData)
+    currencyFile.upload_data(data=json_str, overwrite=True, length=len(json_str))
 
+    
+upload_toADLG2(get_currency_rates('USD'))
