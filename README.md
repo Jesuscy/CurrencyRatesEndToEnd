@@ -19,7 +19,7 @@ Esto otorga a la App Registration los permisos necesarios sobre el Storage Accou
 # Trabajar con Databricks
 He decidido trabajar con Databricks, desde mi repositorio, para esto desde añado la carpeta git 
 a databricks, pudiendo trabajar desde la UI de Databricks en mi repo.
-![alt text](image.png)
+![alt text](img/image.png)
 ## Permisos en DataBricks
 ### Para manejar el acceso de Databricks al DataLake he seguido los siguientes pasos:
 
@@ -28,3 +28,4 @@ a databricks, pudiendo trabajar desde la UI de Databricks en mi repo.
 3. Crear secreto en key vault
 4. Añadir a un secret-scope de databricks el secreto.
 5. Conectar desde el nootebook usando el método de conexión de service-principal 
+![alt text](img/image-sp-con.png)
