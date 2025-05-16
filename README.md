@@ -15,3 +15,6 @@
 8. Haz clic en **Revisar y asignar** para finalizar.
 
 Esto otorga a la App Registration los permisos necesarios sobre el Storage Account.
+
+# Trabajar con Databricks
+He decidido trabajar con Databricks, desde mi repositorio, para esto
