@@ -17,4 +17,6 @@
 Esto otorga a la App Registration los permisos necesarios sobre el Storage Account.
 
 # Trabajar con Databricks
-He decidido trabajar con Databricks, desde mi repositorio, para esto
+He decidido trabajar con Databricks, desde mi repositorio, para esto desde añado la carpeta git 
+a databricks, pudiendo trabajar desde la UI de Databricks en mi repo.
+![alt text](image.png)
