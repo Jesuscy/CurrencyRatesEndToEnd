@@ -1,4 +1,4 @@
-##Aquí voy a explicar las dificultades y pasos clave a seguir al realizar el proyecto.
+#Aquí voy a explicar las dificultades y pasos clave a seguir al realizar el proyecto.
 
 1. Accede al [portal de Azure](https://portal.azure.com/).
 2. Navega al **Storage Account** deseado.
