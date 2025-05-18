@@ -18,3 +18,11 @@ __pycache__/
 # Archivos del sistema operativo
 .DS_Store
 Thumbs.db
+
+# Airflow
+airflow_settings.yaml
+
+#Docker
+.dockerignore
+
+packages.txt

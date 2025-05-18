@@ -1,26 +1,9 @@
-import os
-import requests
 import json
 from datetime import datetime
-from requests.exceptions import HTTPError
 from dotenv import load_dotenv
 from azure.identity import DefaultAzureCredential
 from azure.storage.filedatalake import DataLakeServiceClient
-
-load_dotenv()
-
-
-def get_currency_rates(currency):
-    api_key = os.getenv('API_KEY')
-    url = f'https://v6.exchangerate-api.com/v6/{api_key}/latest/{currency}'
-    try:
-        response = requests.get(url)
-        data = response.json()
-        return data
-    
-    except HTTPError as http_err:
-        print(f'Error en la petición: {http_err}')
-
+import currency_request
 
 def azure_login():
     account = os.getenv('ADLG2_STORAGE_ACCOUNT')
@@ -51,4 +34,4 @@ def upload_toADLG2(currencyFileData):
     currencyFile.upload_data(data=json_str, overwrite=True, length=len(json_str))
 
     
-upload_toADLG2(get_currency_rates('USD'))
+upload_toADLG2(currency_request.get_currency_rates('USD'))
