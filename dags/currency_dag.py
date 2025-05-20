@@ -22,22 +22,22 @@ def currency_pipeline():
 
     raw_to_curated = DatabricksSubmitRunOperator(
         task_id="run_transform_currency_notebook",
-        databricks_conn_id="databricks_default",  # Asegúrate de que existe esta conexión en Airflow
+        databricks_conn_id="databricks_default",  
         json={
-            "existing_cluster_id": "dlt-cluster-id",  # Cambia esto por tu cluster real
+            "existing_cluster_id": "",  
             "notebook_task": {
-                "notebook_path": "/Users/tu_usuario@databricks.com/path/to/transform_currency",  # Ruta real del notebook
+                "notebook_path": "", 
             },
         },
     )
 
     curated_to_common = DatabricksSubmitRunOperator(
         task_id="run_transform_currency_notebook",
-        databricks_conn_id="databricks_default",  # Asegúrate de que existe esta conexión en Airflow
+        databricks_conn_id="databricks_default",  
         json={
-            "existing_cluster_id": "dlt-cluster-id",  # Cambia esto por tu cluster real
+            "existing_cluster_id": "",  
             "notebook_task": {
-                "notebook_path": "/Users/tu_usuario@databricks.com/path/to/transform_currency",  # Ruta real del notebook
+                "notebook_path": "",  
             },
         },
     )
