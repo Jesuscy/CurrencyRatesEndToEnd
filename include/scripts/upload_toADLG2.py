@@ -13,7 +13,7 @@ def azure_login():
     return service_client
 
 def upload_toADLG2(currencyFileData):
-    todayDate = datetime.now().strftime("%Y%m%d%H%M%S")
+    todayDate = datetime.now().strftime("%Y%m%d")
     service_client = azure_login()
 
     #Compruebo que exista el container.
