@@ -1,5 +1,7 @@
-# Aquí voy a explicar las dificultades y pasos clave a seguir al realizar el proyecto.
+# Arquitectura del Proyecto
+![alt text](img/pipeline_arq_schema.png)
 
+# Aquí voy a explicar las dificultades y pasos clave a seguir al realizar el proyecto.
 
 ## Script 
 · Para la realización del script me he apoyado en la documentación oficial de Microsoft ->[Microsoft Learn Datalake Service Client](https://learn.microsoft.com/en-us/python/api/overview/azure/storage-file-datalake-readme?view=azure-python).
