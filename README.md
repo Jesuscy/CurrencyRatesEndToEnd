@@ -23,9 +23,17 @@ a databricks, pudiendo trabajar desde la UI de Databricks en mi repo.
 ## Permisos en DataBricks
 ### Para manejar el acceso de Databricks al DataLake he seguido los siguientes pasos:
 
-1. Crear un service principal
-2. Añadir al grupo de acceso a DataLake con rol de Storage Blob Data Contributor
+1. Crear un **service principal**
+2. Añadir al grupo de acceso a DataLake con rol de **Storage Blob Data Contributor**
 3. Crear secreto en key vault
-4. Añadir a un secret-scope de databricks el secreto.
-5. Conectar desde el nootebook usando el método de conexión de service-principal 
+4. Añadir a un **secret-scope** de databricks el secreto.
+5. Conectar desde el nootebook usando el método de conexión de **service-principal**
+
 ![alt text](img/image-sp-con.png)
+
+# Airflow
+### Para la orquestación del proyecto he usado airflow, al ser un proyecto de práctica he decidido desplegarlo con **Astro CLI**
+Astro CLI facilita la el proceso de instalación y configuración de los componentes de airflow, que no son parte del alcance que quería para este proyecto.
+
+Dejo la docu de [Astro CLI](https://www.astronomer.io/docs/astro/cli/overview). en la que me he apoyado
+
