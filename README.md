@@ -37,7 +37,7 @@ a databricks, pudiendo trabajar desde la UI de Databricks en mi repo.
 ### Para la orquestación del proyecto he usado airflow, al ser un proyecto de práctica he decidido desplegarlo con **Astro CLI**
 Astro CLI facilita la el proceso de instalación y configuración de los componentes de airflow, que no son parte del alcance que quería para este proyecto.
 
-Dejo la docu de [Astro CLI](https://www.astronomer.io/docs/astro/cli/overview). en la que me he apoyado.
+Dejo la docu de **[Astro CLI](https://www.astronomer.io/docs/astro/cli/overview).** en la que me he apoyado.
 
 La orquestación realizada por **airflow**, es la siguiente: diariamente mandamos la ejecución de un script que realiza la petición, otro que realiza la subida a raw, a partir de este paso, utilizando **DatabricksSubmitRunOperator** realizamos la ejecución de los scripts de transformación de raw a common en nootebooks de databricks, pronto haré otro proyecto con el enfoque de jobs en databricks.
 
