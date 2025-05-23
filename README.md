@@ -41,6 +41,7 @@ Dejo la docu de **[Astro CLI](https://www.astronomer.io/docs/astro/cli/overview)
 
 La orquestación realizada por **airflow**, es la siguiente: diariamente mandamos la ejecución de un script que realiza la petición, otro que realiza la subida a raw, a partir de este paso, utilizando **DatabricksSubmitRunOperator** realizamos la ejecución de los scripts de transformación de raw a common en nootebooks de databricks, pronto haré otro proyecto con el enfoque de jobs en databricks.
 
+Para que **airflow** pueda acceder a databricks utilizo las conections de airflow, establecidas en el fichero de configuración (que no está en github).
 
 
 

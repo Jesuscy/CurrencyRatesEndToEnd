@@ -25,7 +25,7 @@ def currency_pipeline():
         upload_toADLG2()
 
     raw_to_curated = DatabricksSubmitRunOperator(
-        task_id="run_transform_currency_notebook",
+        task_id="run_transform_raw_to_curated_notebook",
         databricks_conn_id="databricks_default",  
         json={
             "existing_cluster_id": f"{os.getenv('CLUSTER_ID')}",  
@@ -36,7 +36,7 @@ def currency_pipeline():
     )
 
     curated_to_common = DatabricksSubmitRunOperator(
-        task_id="run_transform_currency_notebook",
+        task_id="run_transform_curated_to_common_notebook",
         databricks_conn_id="databricks_default",  
         json={
             "existing_cluster_id": f"{os.getenv('CLUSTER_ID')}",  
