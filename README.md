@@ -45,3 +45,5 @@ Para que **airflow** pueda acceder a databricks utilizo las conections de airflo
 
 
 
+# Azure
+Por parte de **Azure** los servicios que he usado son [Azure Databricks](https://azure.microsoft.com/es-es/products/databricks/?msockid=292b80f2ffe061eb1aaf9552fe0b60a1). y [Azure DataLake 2Gen](https://learn.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction).
