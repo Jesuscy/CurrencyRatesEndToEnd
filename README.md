@@ -6,13 +6,15 @@
 # Extracción 
 
 ## Script 
-Para la realización del script me he apoyado en la documentación oficial de Microsoft ->[Microsoft Learn Datalake Service Client](https://learn.microsoft.com/en-us/python/api/overview/azure/storage-file-datalake-readme?view=azure-python).
+Para la realización del script me he apoyado en la documentación oficial de Microsoft ->[Microsoft Learn Datalake Service Client](https://learn.microsoft.com/en-us/python/api/overview/azure/storage-file-datalake-readme?view=azure-python),
+en mi caso el script hace una petición a la [API Exange Rate](https://www.exchangerate-api.com/). y se encarga de la subida a la capa **raw**.
 
 # Transformación
 
 ## Databricks
 He decidido trabajar con Databricks, desde mi repositorio, para esto desde añado la carpeta git 
 a databricks, pudiendo trabajar desde la UI de Databricks en mi repo.
+
 ![alt text](img/image.png)
 
 ## Permisos en DataBricks
@@ -28,7 +30,6 @@ a databricks, pudiendo trabajar desde la UI de Databricks en mi repo.
 
 # Carga
 La carga de datos al nivel **raw** es realizada por el script, a los niveles **curated** y **common** los datos son cargados por los cuadernos de databricks tras realizar las transformaciones.
-
 
 # Orquestación
 
