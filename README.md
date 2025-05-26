@@ -58,6 +58,6 @@ Esto otorga a la App Registration los permisos necesarios sobre el Storage Accou
 
 # Cloud Provider
 ## Azure
-Por parte de **Azure** los servicios que he usado son [Azure Databricks](https://azure.microsoft.com/es-es/products/databricks/?msockid=292b80f2ffe061eb1aaf9552fe0b60a1). y [Azure DataLake 2Gen](https://learn.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction).
+Por parte de **Azure** los servicios que he usado son [Azure Databricks](https://azure.microsoft.com/es-es/products/databricks/?msockid=292b80f2ffe061eb1aaf9552fe0b60a1)., [Azure DataLake 2Gen](https://learn.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction). y [Azure Key Vault](https://learn.microsoft.com/es-es/azure/key-vault/general/overview).
 
 ![alt text](img/azure_enviroment.png)
