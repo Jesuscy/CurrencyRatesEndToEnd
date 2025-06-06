@@ -1,7 +1,5 @@
 import os
-import requests
 from datetime import datetime
-from airflow.sdk.definitions.asset import Asset
 from airflow.decorators import dag, task
 from airflow.providers.databricks.operators.databricks import DatabricksSubmitRunOperator
 from include.scripts import upload_toADLG2
